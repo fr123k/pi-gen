@@ -13,7 +13,8 @@ deploy:
   provider: releases
   api_key:
     secure: TIJaypPyQRjr8bRjsI8OkzMbZw+5klbjU1vsanbwN8QHYwu+JqcSW9Eso1ye4HoldWksb+wgBrLpxCJ4GF8asqqu08h3WlTA9+PvCMgGbtUcQ4ShsK+lTQDXNSZ10Ylb6ai4nJPl+wLABCZCw+dr7ABdi1wJHI7F85h5p4olrueYnujykJJWUpWxJRfdMiKg+3QvxjMjzWX2w6/5SWX7hPHGCTzjYkoIO34fhLre29pjSzXP+u2A+ywvu6E6QUo4AptoDoClwkUJdcaQw2J+FXJlCiA9eQQBGQ2KgJL3qGkI/VOfZupNB2rlLIEBffvuIs8g4iLwh4bKhBdMnnNG1omUJ+zRaBJ0f5dkB+WgFSe6fkBS8l5s99sPMV9VHlYwYWOpQ2P9TFLHlQioMn2W/RZTRfvzG+aCNdI/NQPfa12LDxFh9nEykYZB5m0/LVLw/sHQ7HiX7HWuELhkoiKKaOPshG8V62Whjm2wb/z5aEBZ4Q41mbR68Dy51010uSnFSwIr9RGfk7uVfnAQBcsVQhkkV04rmGgnEo7NZBK0GZtxJXS0oYTAIUYhHiX6QiaZPBjaT4xWeaxhw559qjDBvqPm3N6A0EyLrK4JV8+RgHdTpc3lG8yg+BJIHXj9+uSnzIjdFZGRx+1e+ZqeeGAAltp6rgRaPHdeyvHH55hFHF8=
-  file: deploy/image_2020-01-11-rasberry-pi-vpn-lite.zip
+  file_glob: true
+  file: deploy/*
   on:
     repo: fr123k/pi-gen
     branch: fr123k/enable_travis_build
