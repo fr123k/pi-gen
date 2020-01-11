@@ -18,3 +18,5 @@ deploy:
   skip_cleanup: true
   edge: true
   draft: true
+  on:
+    all_branches: true
