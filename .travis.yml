@@ -9,4 +9,4 @@ services:
 - docker
 
 script:
-- ./build-docker.sh
+- ./build-docker.sh -c pi4-config
