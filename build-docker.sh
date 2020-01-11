@@ -29,12 +29,12 @@ do
 			;;
 	esac
 done
-
+echo "dasaaad"
 # Ensure that the configuration file is an absolute path
-if test -x /usr/bin/readlink; then
-	CONFIG_FILE=$(readlink -f "$CONFIG_FILE")
-fi
-
+# if test -x /usr/bin/readlink; then
+# 	CONFIG_FILE=$(readlink "$CONFIG_FILE")
+# fi
+echo "dasd"
 # Ensure that the confguration file is present
 if test -z "${CONFIG_FILE}"; then
 	echo "Configuration file need to be present in '${DIR}/config' or path passed as parameter"
