@@ -2,6 +2,7 @@ sudo: required
 
 env:
   global:
+    - secure: "u2fVBPGUG1MdbEZwfcQO5h/yyQ2bJi4RKuXKqvVGQciGyX1wWIzFzGl6xJDXVjP+pytv7fRZkyA7iLALT82uqZ2sZAKx7YyGH8oSRTOiwMVHN8xnZA2Ua7BiN/cH2xOAGC3i78yNJYRltYKVuoTNlKeFhxzoSux9wu7X/FhN5br5F+5ZLi/ZVEP4ZfObdBvzZhypJyl849zBlf2GWtnDfmehOPE38LWx6txkD43bThzglzt3HomtC7F4YlvpD3oN3Wouh9dIRnPqHpnytZyjdVqhi7MLOaNkL6r8ceAwOJ6fpb4ZMATX5BH7a6Ei1KmT1pwZ8nmH/MrX2hyndr2ot+FxQq2yMPmJ1tfSlA0L01iAyi1TwAriVpPiaee8ao9udR0Q7WbwjfAU8jbGXXcDzQ8BSOiCStFbXcXXa3iOdd51nIASqup8WlLRyuMeIlBbvj6QdLEt3rWK1ssxaw3eSGlzkFYNfgjiYGtRA1bFGK/kLOERSbcZrwQBSuSOqI9p2lG8/RxDG9J5K5yEfLVt38VcQyo+Tefkg/NELtZuXf4uYbvzpRCF8unCvEyLaP4WPAr2GGRyALbjl8ixHu5A7oR/53gD0eSDCJ4tcmlFfy0HpSqM0q1Xuio7HLMaWWXsg1Zr3+WOokgzQqAaclB26dnp7w+95c2TWueUrXf31E8="
     - IMG_NAME="rasberry-pi-vpn"
     - STAGE_LIST="stage0 stage1 stage2"
 
@@ -10,3 +11,10 @@ services:
 
 script:
 - ./build-docker.sh -c pi4-config
+
+deploy:
+  provider: releases
+  file: "deploy/image_2020-01-11-rasberry-pi-vpn-lite.zip"
+  skip_cleanup: true
+  edge: true
+  draft: true
