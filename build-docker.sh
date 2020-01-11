@@ -31,14 +31,14 @@ do
 done
 
 # Ensure that the configuration file is an absolute path
-if test -x /usr/bin/realpath; then
-	CONFIG_FILE=$(realpath -s "$CONFIG_FILE")
+if test -x /usr/bin/readlink; then
+	CONFIG_FILE=$(readlink -f "$CONFIG_FILE")
 fi
 
 # Ensure that the confguration file is present
 if test -z "${CONFIG_FILE}"; then
 	echo "Configuration file need to be present in '${DIR}/config' or path passed as parameter"
-	exit 1
+	#exit 1
 else
 	# shellcheck disable=SC1090
 	source "${CONFIG_FILE}"

@@ -1,7 +1,9 @@
 sudo: required
 
 env:
-  - STAGE_LIST="stage0 stage1 stage2"
+  global:
+    - IMG_NAME="rasberry-pi-vpn"
+    - STAGE_LIST="stage0 stage1 stage2"
 
 services:
 - docker
