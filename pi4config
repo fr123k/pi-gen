@@ -1,0 +1,9 @@
+IMG_NAME="rasberry-pi-vpn"
+STAGE_LIST="stage0 stage1 stage2 stage-wireguard"
+ENABLE_SSH=1
+IMG_FILENAME=rasberry-pi-vpn
+ZIP_FILENAME=rasberry-pi-vpn
+USE_QEMU=1
+CONTINUE=1
+APT_PROXY=http://172.17.0.1:3142
+#CLEAN=1

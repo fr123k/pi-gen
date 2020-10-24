@@ -1,0 +1,6 @@
+raspberrypi-kernel-headers
+wireguard
+wireguard-dkms
+wireguard-tools
+git
+qrencode
